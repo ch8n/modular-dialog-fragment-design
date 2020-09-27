@@ -2,16 +2,25 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/colorPrimary"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.ch8n.sample.MainActivity">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/root"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical">
 
     <androidx.appcompat.widget.AppCompatTextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginBottom="80dp"
+        android:layout_marginBottom="40dp"
         android:gravity="center"
+        android:textColor="#fff"
         android:text="Activity Scoped Example"
         android:textSize="28sp" />
 
@@ -26,5 +35,19 @@
         android:text="Show dialog!"
         android:textColor="#fff"
         android:textSize="28sp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_show_fragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:paddingStart="20dp"
+        android:layout_marginTop="40dp"
+        android:paddingEnd="20dp"
+        android:text="Show Fragment!"
+        android:textColor="#fff"
+        android:textSize="28sp" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
 
 </FrameLayout>

@@ -14,8 +14,8 @@ class MainActivity : AppCompatActivity() {
         val dialogVM = ViewModelProvider(this).get(DialogViewModel::class.java)
 
         with(dialogVM) {
-            dialogTitle.value = "Test title"
-            dialogDescription.value = "some random text yada yada yada..."
+            dialogTitle.value = "Activity Test title"
+            dialogDescription.value = "some random text yada yada yada...set by the activity"
             confirmClickListener = {
                 Toast.makeText(this@MainActivity, "confirm clicked", Toast.LENGTH_SHORT).show()
             }
@@ -32,6 +32,16 @@ class MainActivity : AppCompatActivity() {
             if (supportFragmentManager.findFragmentByTag(ExitDialog.TAG) == null) {
                 ExitDialog.newInstance()
                     .show(supportFragmentManager, ExitDialog.TAG)
+            }
+        }
+
+
+        button_show_fragment.setOnClickListener {
+            if (supportFragmentManager.findFragmentByTag(SampleFragment.TAG) == null) {
+                supportFragmentManager
+                    .beginTransaction()
+                    .add(root.id, SampleFragment.newInstance(), SampleFragment.TAG)
+                    .commit()
             }
         }
     }

@@ -44,7 +44,7 @@ In Fragments, get the `DialogViewModel` using `ViewModelProvider`
 
 ```
 
-##License
+## License
 ```
     Copyright [2020] [Chetan gupta] [chetangupta.net]
    Licensed under the Apache License, Version 2.0 (the "License");

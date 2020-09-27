@@ -16,7 +16,7 @@ this class contains skeletal code for getting ViewModel
 
 ## Applying properties to Dialog
 
-####In Activity, get the `DialogViewModel` using `ViewModelProvider`
+###In Activity, get the `DialogViewModel` using `ViewModelProvider`
 ```
         val dialogVM = ViewModelProvider(this@MainActivity).get(DialogViewModel::class.java)
         // apply properties
@@ -30,7 +30,7 @@ this class contains skeletal code for getting ViewModel
 
 ```
 
-####In Fragments, get the `DialogViewModel` using `ViewModelProvider`
+###In Fragments, get the `DialogViewModel` using `ViewModelProvider`
 ```
         val dialogVM = ViewModelProvider(this@SampleFragment).get(DialogViewModel::class.java)
         // apply properties
@@ -44,7 +44,7 @@ this class contains skeletal code for getting ViewModel
 
 ```
 
-###License
+##License
 ```
     Copyright [2020] [Chetan gupta] [chetangupta.net]
    Licensed under the Apache License, Version 2.0 (the "License");

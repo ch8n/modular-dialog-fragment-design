@@ -32,6 +32,12 @@ abstract class BaseDialogFragment : DialogFragment() {
         return view
     }
 
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+        dialog?.window?.attributes?.width = ViewGroup.LayoutParams.MATCH_PARENT
+        dialog?.window?.attributes?.height = ViewGroup.LayoutParams.WRAP_CONTENT
+    }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setup(view)
